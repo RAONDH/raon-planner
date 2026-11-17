@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>라온 플래너 사진 설명서</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm; }
+  body { font: 11pt/1.65 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; color: #1f2622; word-break: keep-all; }
+  h1 { font-size: 30pt; margin: 0; color: #2f6e55; }
+  h2 { font-size: 17pt; margin: 0 0 6px; padding: 4px 10px; background: linear-gradient(transparent 50%, #b5e0d2 50%); display: inline-block; }
+  h3 { font-size: 12.5pt; margin: 14px 0 4px; }
+  section { page-break-before: always; }
+  .cover { text-align: center; padding-top: 60mm; }
+  .cover img.icon { width: 110px; border-radius: 22px; }
+  .cover p { color: #5e6b63; font-size: 13pt; }
+  .toc { margin: 18mm auto 0; text-align: left; width: 120mm; font-size: 12pt; line-height: 2; }
+  img.shot { width: 100%; border: 1px solid #d3e0cf; border-radius: 6px; margin: 8px 0; }
+  img.half { width: 60%; display: block; margin: 8px auto; border: 1px solid #d3e0cf; border-radius: 6px; }
+  .box { background: #e5eee2; border-radius: 6px; padding: 8px 12px; margin: 8px 0; }
+  .warn { background: #fff4d6; border-radius: 6px; padding: 8px 12px; margin: 8px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0; }
+  td, th { border: 1px solid #d3e0cf; padding: 5px 8px; vertical-align: top; text-align: left; }
+  th { background: #e5eee2; }
+  code { background: #eef2ec; padding: 1px 5px; border-radius: 4px; }
+  ol li, ul li { margin: 3px 0; }
+  .small { color: #5e6b63; font-size: 9.5pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img class="icon" src="images/icon.png" alt="">
+  <h1>라온 플래너</h1>
+  <p>프랭클린 방식 플래너 · 사진 설명서<br>맥 1.4 · 윈도우 1.0 · 안드로이드 1.5 · 2026년 11월</p>
+  <div class="toc">
+    1. 라온 플래너는<br>
+    2. 설치하기 (맥 · 윈도우 · 안드로이드)<br>
+    3. 처음 구글 로그인<br>
+    4. 화면 둘러보기<br>
+    5. 하루를 쓰는 법<br>
+    6. 주간 · 월간 · 만다라트 · 가치와 목표<br>
+    7. 성경 · 글꼴 · 화면<br>
+    8. 동기화와 백업<br>
+    9. 자주 묻는 것 · 문의
+  </div>
+</div>
+
+<section>
+  <h2>1. 라온 플래너는</h2>
+  <p>종이 프랭클린 플래너의 흐름 — <b>가치 → 목표 → 오늘 할 일</b> — 을 컴퓨터와 휴대폰으로 옮긴 무료 플래너입니다. 구글 캘린더와 이어지고, 맥·윈도우·안드로이드에서 같은 자료를 씁니다.</p>
+  <table>
+    <tr><th></th><th>맥</th><th>윈도우</th><th>안드로이드</th></tr>
+    <tr><td>우선순위 업무 · 일일 기록 · 습관</td><td>✓</td><td>✓</td><td>✓</td></tr>
+    <tr><td>구글 캘린더 (개인 + Workspace)</td><td>✓</td><td>✓</td><td>✓</td></tr>
+    <tr><td>주간 · 월간 · 만다라트 · 가치와 목표</td><td>✓ (연간·체크리스트·마스터 목록 포함)</td><td>✓</td><td>✓</td></tr>
+    <tr><td>오늘의 말씀 · 말씀 찾기</td><td>✓</td><td>✓</td><td>✓</td></tr>
+    <tr><td>메일 요약 · Google Tasks · 아침·저녁 창 · 인쇄</td><td>✓</td><td></td><td>아침 알림만</td></tr>
+  </table>
+  <div class="box">자료는 <b>내 컴퓨터</b>와 <b>내 구글 드라이브의 앱 전용 숨김 공간</b>에만 저장됩니다. 만든 사람에게 보내지지 않습니다.</div>
+</section>
+
+<section>
+  <h2>2. 설치하기</h2>
+  <p>안내 페이지 <b>raon-easypaster.github.io/raon-planner</b> 에서 받습니다. 처음 한 번은 경고 창이 나옵니다. 유료 인증을 받지 않은 무료 프로그램이라 나오는 안내이니 아래대로 하시면 됩니다.</p>
+  <h3>🍎 맥 (macOS 14 이상)</h3>
+  <ol>
+    <li><b>맥용 받기</b>로 받은 <code>RaonPlanner-Mac.dmg</code>를 두 번 누릅니다.</li>
+    <li>열린 창에서 <b>라온 플래너</b>를 <b>Applications</b> 폴더로 끌어 놓습니다.</li>
+    <li>응용 프로그램에서 라온 플래너를 엽니다. “확인할 수 없습니다”가 뜨면 [완료] → <b>시스템 설정 → 개인정보 보호 및 보안</b> 맨 아래 <b>그래도 열기</b>.</li>
+    <li>“키체인 접근” 암호 창이 뜨면 맥 로그인 암호를 넣고 <b>항상 허용</b>. (새 버전을 깔 때마다 한 번)</li>
+  </ol>
+  <h3>🪟 윈도우 (10 · 11, 64비트)</h3>
+  <ol>
+    <li><b>윈도우용 받기</b>로 받은 <code>RaonPlanner-Windows.zip</code>을 오른쪽 클릭 → <b>모두 압축 풀기</b>. (압축을 풀지 않고 안에서 바로 열면 안 됩니다)</li>
+    <li>풀린 <b>RaonPlanner</b> 폴더에서 <b>설치하기</b>를 두 번 누릅니다.</li>
+    <li>“Windows의 PC 보호” 파란 창이 뜨면 <b>추가 정보</b> → <b>실행</b>.</li>
+    <li>까만 창에 “설치를 마쳤습니다”가 나오고 라온 플래너가 열립니다. 바탕화면과 시작 메뉴에 <b>라온 플래너</b>가 생깁니다.</li>
+  </ol>
+  <p class="small">지우려면: 시작 메뉴 대신 <code>%LOCALAPPDATA%\Programs\RaonPlanner</code> 폴더의 <b>제거하기</b>를 두 번 누르세요. 자료(<code>%APPDATA%\RaonPlanner</code>)는 남겨 둡니다.</p>
+  <h3>📱 안드로이드</h3>
+  <ol>
+    <li>휴대폰 브라우저로 안내 페이지를 열고 <b>안드로이드 받기</b>를 누릅니다. (컴퓨터에서 받았다면 텔레그램 ‘저장한 메시지’나 구글 드라이브로 옮기세요. 카카오톡은 설치 파일을 보내지 못합니다)</li>
+    <li>받은 파일을 열고 “이 출처의 앱 설치” → <b>허용</b>을 켭니다.</li>
+    <li>“Play 프로텍트” 경고가 뜨면 <b>무시하고 설치</b>. 검사에 1~2분 걸릴 수 있습니다.</li>
+    <li>알림 허용을 물으면 <b>허용</b> (아침 7시 브리핑 알림에 필요).</li>
+  </ol>
+</section>
+
+<section>
+  <h2>3. 처음 구글 로그인</h2>
+  <p>개인 Gmail 계정으로 먼저 로그인합니다. 이 계정의 구글 드라이브로 기기끼리 자료를 맞추고, 캘린더 일정을 가져옵니다.</p>
+  <table>
+    <tr><th>맥</th><td>설정(⌘,) → <b>구글 계정</b> 탭 → <b>구글 계정 추가</b>. Workspace 계정도 같은 단추로 하나 더 추가합니다.</td></tr>
+    <tr><th>윈도우</th><td>일일 화면의 <b>구글 로그인</b> → 기본 브라우저가 열립니다. 로그인이 끝나면 “로그인이 끝났습니다” 화면을 닫고 프로그램으로 돌아옵니다. Workspace는 ⚙ 설정 → <b>워크스페이스 캘린더 → 계정 추가</b>.</td></tr>
+    <tr><th>안드로이드</th><td>첫 화면의 <b>구글 로그인</b>. Workspace는 ⚙ → <b>계정 추가</b>.</td></tr>
+  </table>
+  <div class="warn">
+    <b>“Google에서 확인하지 않은 앱” 화면이 나오면</b><br>
+    왼쪽 아래 <b>고급</b> → <b>라온 플래너(으)로 이동(안전하지 않음)</b> → 다음 화면에서 권한을 모두 체크하고 <b>계속</b>(허용).<br>
+    구글의 정식 앱 심사를 받지 않은 무료 프로그램이라 나오는 화면입니다.
+  </div>
+  <div class="box">
+    <b>교회 Google Workspace 계정</b>은 Workspace 관리자가 관리 콘솔 → 보안 → API 관리 → 앱 액세스 제어에서 ‘라온 플래너’를 <b>신뢰할 수 있음</b>으로 등록해야 로그인됩니다. 개인 Gmail은 바로 됩니다.
+  </div>
+</section>
+
+<section>
+  <h2>4. 화면 둘러보기</h2>
+  <img class="shot" src="images/mac-daily.jpg" alt="">
+  <ul>
+    <li><b>위쪽 탭</b>: 일일 · 메일 · 주간 · 월간 · 연간 · 만다라트 · 체크리스트 · 마스터 목록 · 가치·목표 · 습관 · 프로젝트 · 캘린더 연결 (윈도우·휴대폰은 일일 · 주간 · 월간 · 만다라트 · 목표)</li>
+    <li><b>왼쪽 면</b>: 큰 날짜(음력, 올해 몇 번째 날), 오늘의 명언, <b>우선순위 업무</b>, <b>약속 및 일정</b>(시간표)</li>
+    <li><b>오른쪽 면</b>: 미니 달력, <b>오늘의 말씀</b>, <b>이번 주 덕목</b>(프랭클린 13덕목), <b>일일 기록</b>과 포스트잇</li>
+    <li><b>오른쪽 둥근 스티커 1~12월</b>(맥): 누르면 그 달로 이동. ‹ 오늘 › 단추로 하루씩 이동</li>
+    <li><b>색연필</b>(맥): 펜 색을 고르고, <b>손글씨</b>를 켜면 업무와 기록이 손글씨 글꼴로 보입니다</li>
+  </ul>
+  <h3>윈도우</h3>
+  <img class="shot" src="images/win-daily.jpg" alt="">
+  <p class="small">위쪽 검은 띠에 탭, <b>＋ 빠른 입력</b>(Ctrl+K), 동기화, ⚙ 설정이 있습니다.</p>
+</section>
+
+<section>
+  <h2>5. 하루를 쓰는 법</h2>
+  <h3>아침 — 오늘 할 일 정하기</h3>
+  <ol>
+    <li>맥은 아침 7시에 <b>오늘의 브리핑</b> 창이 뜹니다 (휴대폰은 알림). 오늘 일정, A 업무, 어제 남은 일을 봅니다.</li>
+    <li>“어제 끝내지 못한 업무 ○개” → <b>오늘로 가져오기</b>.</li>
+    <li>A(반드시) · B(해야 함) · C(하면 좋음)를 고르고 할 일을 적고 Enter. 번호(A1, A2…)는 저절로 붙습니다.</li>
+  </ol>
+  <h3>낮 — 표시하기</h3>
+  <table>
+    <tr><th>표시</th><th>뜻</th><th>하는 법</th></tr>
+    <tr><td>✓</td><td>완료</td><td>네모를 누름</td></tr>
+    <tr><td>•</td><td>진행 중</td><td rowspan="4">맥: 업무 줄의 ⋯ 또는 오른쪽 클릭<br>윈도우·휴대폰: 업무 글자를 누름</td></tr>
+    <tr><td>→</td><td>내일로 이월</td></tr>
+    <tr><td>○</td><td>다른 사람에게 맡김</td></tr>
+    <tr><td>✕</td><td>하지 않기로 함 (기록은 남김)</td></tr>
+  </table>
+  <p>아예 지우려면 같은 메뉴의 <b>목록에서 완전히 지우기</b>.</p>
+  <h3>일정 넣기 — 빠른 입력</h3>
+  <p>맥 <b>⌥ 스페이스</b>, 윈도우 <b>Ctrl+K</b>, 휴대폰 오른쪽 아래 <b>＋</b>.</p>
+  <div class="box">
+    <code>내일 오후 3시 심방</code> → 구글 캘린더 일정<br>
+    <code>다음주 수요일 10시~12시 교역자 회의</code> → 일정<br>
+    <code>A 주보 원고</code> → 오늘 A 업무 &nbsp;·&nbsp; <code>금요일 B 설교 개요</code> → 금요일 B 업무
+  </div>
+  <h3>저녁 — 돌아보기</h3>
+  <p>일일 기록에 오늘 있었던 일과 감사를 적습니다. 남은 일은 <b>미완료 → 내일로 이월</b>. 맥은 밤 9시에 <b>오늘 돌아보기</b> 창이 뜹니다.</p>
+</section>
+
+<section>
+  <h2>6. 주간 · 월간 · 만다라트 · 가치와 목표</h2>
+  <img class="shot" src="images/mac-weekly.jpg" alt="">
+  <p><b>주간</b>: 일요일부터 한 주의 업무와 일정. 맥은 일요일 저녁 8시에 <b>주간 계획 시간</b> 창이 떠서 역할별로 이번 주 ‘소중한 것 먼저’를 정합니다. <b>월간</b>: 날짜를 누르면 그날 일일 화면으로.</p>
+  <img class="shot" src="images/mac-mandalart.jpg" alt="">
+  <p><b>만다라트</b>: 가운데에 핵심 목표, 둘레에 세부 목표 8개, 그 바깥에 실천 항목. 맥은 <b>+ 새 만다라트</b>로 이름(예: “2026 다이어트”)을 붙여 여러 개 만듭니다. 칸을 두 번 누르면 완료 표시, 오른쪽 클릭 → <b>오늘 업무로 보내기</b>. 휴대폰·윈도우는 세부 목표를 누르면 실천 항목 8개가 크게 나옵니다.</p>
+  <p><b>가치·목표</b>: 지배 가치(예: “말씀과 기도로 하나님과 동행한다”)마다 목표를 달고, 업무에 가치를 이어 이번 주 시간이 어디에 쓰였는지 봅니다. <b>습관</b>은 날마다 동그라미 체크, <b>프로젝트</b>는 단계별로.</p>
+</section>
+
+<section>
+  <h2>7. 성경 · 글꼴 · 화면</h2>
+  <h3>📖 성경 넣기</h3>
+  <p>개역개정 성경은 대한성서공회 저작권 때문에 들어 있지 않습니다. 가지고 계신 성경 JSON 파일을 넣으면 오늘의 말씀과 말씀 찾기가 됩니다.</p>
+  <div class="box">파일 형식: <code>{"창1:1": "태초에 하나님이 천지를 창조하시니라", "창1:2": "…", …}</code><br>
+  맥: 설정 → 성경 → <b>가져오기</b> · 윈도우: ⚙ → 성경 → <b>파일 가져오기</b> · 휴대폰: ⚙ → 성경 → <b>파일 가져오기</b></div>
+  <p>말씀 찾기 칸에 <code>요3:16</code>, <code>시편 23:1-6</code>, <code>창세기1장1절</code>처럼 적습니다.</p>
+  <h3>✍️ 글꼴</h3>
+  <img class="half" src="images/fonts.png" alt="">
+  <p>맥은 위쪽 <b>글꼴</b> 단추에서 제목·본문·손글씨 글꼴을 따로 고릅니다 (맥에 설치된 한글 글꼴 모두). 윈도우·휴대폰은 ⚙ → <b>제목 글꼴</b>.</p>
+  <h3>🌙 화면</h3>
+  <p>맥은 ◐ 단추로 밝게/어둡게. 일정 알림(10분 전, 화상회의 5분 전)은 설정 → 알림에서 켭니다.</p>
+</section>
+
+<section>
+  <h2>8. 동기화와 백업</h2>
+  <ul>
+    <li>업무, 일일 기록, 습관, 만다라트, 가치·목표, 프로젝트, 주간 계획이 <b>개인 Gmail 계정의 구글 드라이브</b>(앱 전용 숨김 공간)로 맞춰집니다. 드라이브 화면에는 보이지 않고, 다른 파일은 보지 않습니다.</li>
+    <li>고치면 몇 초 뒤, 그리고 15분마다(휴대폰은 1시간마다) 맞춥니다. 바로 맞추려면 동기화 단추(🔄)나 맥 설정 → <b>지금 동기화</b>.</li>
+    <li>같은 항목을 두 기기에서 동시에 고치면 나중에 맞춘 쪽이 남고, 다른 쪽 내용은 맥 백업 폴더의 ‘동기화충돌’ 파일에 남습니다.</li>
+    <li><b>모든 기기에서 같은 개인 Gmail</b>로 로그인해야 자료가 맞춰집니다.</li>
+    <li>맥은 하루 한 번과 앱을 끌 때 <b>iCloud Drive › 라온 플래너 백업</b>에 자동 백업(30일). 내보내기 → 자료 전체 백업 파일, 가져오기로 되돌리기.</li>
+  </ul>
+  <img class="shot" src="images/mac-values.jpg" alt="">
+</section>
+
+<section>
+  <h2>9. 자주 묻는 것</h2>
+  <p><b>Q. 맥에서 키체인 암호 창이 또 떠요.</b><br>새 버전을 깔면 한 번 뜹니다. 맥 로그인 암호 → <b>항상 허용</b>.</p>
+  <p><b>Q. 윈도우에서 설치하기를 눌러도 아무 일이 없어요.</b><br>zip 안에서 바로 누르지 말고 <b>모두 압축 풀기</b>를 한 뒤 풀린 폴더에서 누르세요.</p>
+  <p><b>Q. 일정이 안 보여요.</b><br>로그인했는지, 맥은 캘린더 연결 탭에서 그 캘린더의 ‘표시’가 켜져 있는지 확인하세요. 윈도우·휴대폰은 맥에서 켜고 끈 설정을 따릅니다.</p>
+  <p><b>Q. 휴대폰에서 고친 게 컴퓨터에 안 보여요.</b><br>컴퓨터에서 동기화(🔄)를 누르세요. 두 기기가 같은 개인 Gmail인지 확인하세요.</p>
+  <p><b>Q. Workspace 계정으로 로그인이 안 돼요.</b><br>“관리자가 차단한 앱”이 나오면 관리자가 신뢰 앱으로 등록해야 합니다 (3장).</p>
+  <p><b>Q. “다시 로그인해야 합니다”가 떠요.</b><br>같은 계정으로 다시 로그인하면 됩니다. 자료는 그대로입니다.</p>
+  <div class="box" style="margin-top:14mm; text-align:center">
+    <b>🙏 언제든 연락 주세요</b><br>
+    카카오 오픈채팅: <b>open.kakao.com/o/ghZQNlXi</b><br>
+    안내 페이지: raon-easypaster.github.io/raon-planner<br>
+    <span class="small">만든 사람: 쉬운목사 이광복 · 무료로 나눕니다</span>
+  </div>
+</section>
+</body>
+</html>
