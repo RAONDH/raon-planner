@@ -36,6 +36,17 @@
   .btn.main { background: var(--brand2); color: #fff; border-style: solid; }
   .btn.kakao { background: #fee500; border: 2px solid #fee500; color: #191919; }
   .btn:active { transform: scale(.98); }
+  .pick { font-weight: 700; margin: 6px 0 10px; }
+  .eds { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 900px; margin: 0 auto 18px; text-align: left; }
+  .eds .pick { grid-column: 1 / -1; text-align: center; }
+  .ed { display: block; background: var(--panel); border: 2px solid var(--line); border-radius: 8px; padding: 12px 12px 10px; cursor: pointer; }
+  .ed input { position: absolute; opacity: 0; }
+  .ed b { display: block; font-size: 17px; }
+  .ed small { display: block; color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 4px; }
+  .ed.on { border-color: var(--brand2); background: var(--soft); box-shadow: 2px 3px 0 rgba(0,0,0,.08); }
+  .cmp td, .cmp th { border-bottom: 1px dashed var(--line); padding: 8px 10px; text-align: center; }
+  .cmp th:first-child, .cmp td:first-child { text-align: left; }
+  .cmp { border-collapse: collapse; width: 100%; background: var(--panel); border-radius: 8px; }
   .ver { margin-top: 12px; color: var(--muted); font-size: 14px; }
 
   .shot { margin: 34px auto 0; max-width: 980px; position: relative; }
@@ -72,6 +83,7 @@
 
   @media (max-width: 860px) {
     .three, .feat, .two, .steps { grid-template-columns: 1fr; }
+    .eds { grid-template-columns: 1fr 1fr; }
     header.top a.hide-m { display: none; }
     .btn { min-width: 0; width: 100%; }
     .shot::before, .shot::after { display: none; }
@@ -91,13 +103,37 @@
 
   <div class="hero">
     <h1>가치에서 <em>오늘 할 일</em>까지<br>프랭클린 방식 수첩을 컴퓨터에</h1>
-    <p class="lead">우선순위 업무, 구글 캘린더 일정, 일일 기록, 만다라트를 한 권의 수첩처럼. 맥·윈도우·안드로이드 휴대폰에서 같은 자료를 씁니다. 무료입니다.</p>
-    <div class="dl">
-      <a class="btn main" href="https://github.com/raon-easypaster/raon-planner/releases/latest/download/RaonPlanner-Mac.dmg">맥용 받기<small>macOS 14 이상 · 5MB</small></a>
-      <a class="btn main" href="https://github.com/raon-easypaster/raon-planner/releases/latest/download/RaonPlanner-Windows.zip">윈도우용 받기<small>윈도우 10 · 11 (64비트) · 126MB</small></a>
-      <a class="btn" href="https://github.com/raon-easypaster/raon-planner/releases/latest/download/RaonPlanner-Android.apk">안드로이드 받기<small>휴대폰에서 누르세요 · 14MB</small></a>
+    <p class="lead">우선순위 업무, 구글 캘린더 일정, 일일 기록, 만다라트를 한 권의 수첩처럼. 맥·윈도우·안드로이드 휴대폰에서 같은 자료를 씁니다. 목회자·평신도·사회복지사·일반용 네 가지 판이 있고, 무료입니다.</p>
+    <div class="eds" role="radiogroup" aria-label="판 고르기">
+      <p class="pick">① 판을 고르세요</p>
+      <label class="ed"><input type="radio" name="ed" value="pastor" checked><b>⛪ 목회자용</b><small>말씀 · 덕목 · 설교·심방·주일 예배 템플릿</small></label>
+      <label class="ed"><input type="radio" name="ed" value="lay"><b>🙏 평신도용</b><small>말씀 · 덕목 · 구역 모임·봉사·직장 예시</small></label>
+      <label class="ed"><input type="radio" name="ed" value="social"><b>🤝 사회복지사용</b><small>덕목 · 가정 방문·사례 회의·프로그램 템플릿</small></label>
+      <label class="ed"><input type="radio" name="ed" value="general"><b>📒 일반용</b><small>말씀·덕목 없이 깔끔하게 · 회의·여행·이사 템플릿</small></label>
     </div>
-    <p class="ver">맥 1.4 · 윈도우 1.0 · 안드로이드 1.5 · 2026-11-17 · 회원 가입 없이 무료</p>
+    <p class="pick">② 기기에 맞게 받으세요 — <span id="edname">목회자용</span></p>
+    <div class="dl">
+      <a class="btn main" id="dl-mac" href="https://github.com/raon-easypaster/raon-planner/releases/latest/download/RaonPlanner-Mac-pastor.dmg">맥용 받기<small>macOS 14 이상 · 5MB</small></a>
+      <a class="btn main" id="dl-win" href="https://github.com/raon-easypaster/raon-planner/releases/latest/download/RaonPlanner-Windows-pastor.zip">윈도우용 받기<small>윈도우 10 · 11 (64비트) · 126MB</small></a>
+      <a class="btn" id="dl-and" href="https://github.com/raon-easypaster/raon-planner/releases/latest/download/RaonPlanner-Android-pastor.apk">안드로이드 받기<small>휴대폰에서 누르세요 · 14MB</small></a>
+    </div>
+    <p class="ver">맥 1.5 · 윈도우 1.1 · 안드로이드 1.6 · 2026-11-18 · 회원 가입 없이 무료 · 판은 설치한 뒤에도 설정에서 바꿀 수 있습니다</p>
+    <script>
+      (function () {
+        var base = 'https://github.com/raon-easypaster/raon-planner/releases/latest/download/';
+        var names = { pastor: '목회자용', lay: '평신도용', social: '사회복지사용', general: '일반용' };
+        function set(ed) {
+          document.getElementById('dl-mac').href = base + 'RaonPlanner-Mac-' + ed + '.dmg';
+          document.getElementById('dl-win').href = base + 'RaonPlanner-Windows-' + ed + '.zip';
+          document.getElementById('dl-and').href = base + 'RaonPlanner-Android-' + ed + '.apk';
+          document.getElementById('edname').textContent = names[ed];
+          document.querySelectorAll('.ed').forEach(function (l) { l.classList.toggle('on', l.querySelector('input').value === ed); });
+        }
+        document.querySelectorAll('.ed input').forEach(function (r) { r.addEventListener('change', function () { set(r.value); }); });
+        var q = new URLSearchParams(location.search).get('ed');
+        if (q && names[q]) { document.querySelector('.ed input[value="' + q + '"]').checked = true; set(q); } else set('pastor');
+      })();
+    </script>
 
     <div class="shot">
       <img src="images/mac-daily.jpg" alt="라온 플래너 일일 화면">
@@ -116,13 +152,31 @@
   </section>
 
   <section>
+    <h2>네 가지 판</h2>
+    <p class="sub">기능은 모두 같고, 말씀·덕목과 예시·템플릿이 다릅니다. 설치한 뒤에도 설정 → 판에서 바꿀 수 있습니다.</p>
+    <table class="cmp">
+      <tr><th></th><th>⛪ 목회자용</th><th>🙏 평신도용</th><th>🤝 사회복지사용</th><th>📒 일반용</th></tr>
+      <tr><td>오늘의 말씀 · 말씀 찾기</td><td>✓</td><td>✓</td><td>—</td><td>—</td></tr>
+      <tr><td>이번 주의 덕목 (프랭클린 13덕목)</td><td>✓</td><td>✓</td><td>✓</td><td>—</td></tr>
+      <tr><td>체크리스트 템플릿</td><td>주일 예배 · 심방 · 교회 행사 · 출장</td><td>교회 행사 · 모임 · 출장 · 여행</td><td>가정 방문 · 사례 회의 · 프로그램 운영 · 출장</td><td>모임 · 출장 · 여행 · 이사</td></tr>
+      <tr><td>주간 계획 처음 역할</td><td>목회 · 가정 · 공부 · 개인</td><td>직장 · 가정 · 교회 봉사 · 개인</td><td>현장 · 기관 · 가정 · 자기 돌봄</td><td>일 · 가정 · 성장 · 건강</td></tr>
+    </table>
+    <div class="three" style="grid-template-columns:repeat(4,1fr);margin-top:14px">
+      <div class="card"><img src="images/ed-pastor.jpg" alt=""><p>⛪ 목회자용 — 말씀과 덕목</p></div>
+      <div class="card"><img src="images/ed-lay.jpg" alt=""><p>🙏 평신도용 — 말씀과 덕목</p></div>
+      <div class="card"><img src="images/ed-social.jpg" alt=""><p>🤝 사회복지사용 — 덕목만</p></div>
+      <div class="card"><img src="images/ed-general.jpg" alt=""><p>📒 일반용 — 둘 다 없이</p></div>
+    </div>
+  </section>
+
+  <section>
     <h2>할 수 있는 것</h2>
     <p class="sub">프랭클린 플래너의 흐름 — 가치 → 목표 → 오늘 할 일 — 을 그대로 살렸습니다.</p>
     <ul class="feat">
       <li><b>✅ 우선순위 업무</b><span>A·B·C와 번호, 완료 ✓ · 이월 → · 위임 ○ 표시, 어제 남은 일 가져오기</span></li>
       <li><b>📅 구글 캘린더</b><span>개인 Gmail과 교회 Workspace 계정을 함께, 화상회의 ‘참가’ 단추</span></li>
       <li><b>⚡ 빠른 입력</b><span>“내일 오후 3시 심방”이라고 쓰면 일정, “A 주보 원고”는 업무로</span></li>
-      <li><b>📖 오늘의 말씀</b><span>날마다 한 구절, “요3:16”처럼 찾아보기 (성경 파일은 직접 넣기 — 아래 안내)</span></li>
+      <li><b>📖 오늘의 말씀</b><span>목회자용·평신도용: 날마다 한 구절, “요3:16”처럼 찾아보기 (성경 파일은 직접 넣기 — 아래 안내)</span></li>
       <li><b>🎯 만다라트</b><span>핵심 목표 하나, 세부 목표 8개, 실천 항목 64개. 항목을 오늘 업무로 보내기</span></li>
       <li><b>🧭 가치와 목표</b><span>지배 가치마다 목표, 프로젝트와 단계, 마스터 목록</span></li>
       <li><b>🔁 습관 트래커</b><span>새벽 기도, 걷기… 날마다 동그라미 체크</span></li>
@@ -199,7 +253,7 @@
   <section>
     <h2>알아 두실 점</h2>
     <div class="card">
-      <h3>📖 개역개정 성경은 들어 있지 않습니다</h3>
+      <h3>📖 개역개정 성경은 들어 있지 않습니다 (목회자용·평신도용)</h3>
       <p>개역개정 성경은 대한성서공회에 저작권이 있어 프로그램에 넣지 않았습니다. 가지고 계신 성경 파일(<code>{"창1:1": "태초에 …"}</code> 형식의 JSON)을 설정 → 성경 → <b>파일 가져오기</b>로 넣으면 오늘의 말씀과 “요3:16” 찾기가 됩니다.</p>
     </div>
   </section>
